@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+a.active,
+a.hover,
+a.visited {
+  border: 0;
+  outline: 0;
+}
+
+.border-orange-300 {
+  border-color: rgb(253 186 116);
+}
+
+.navbar {
+  width: 100%;
+  padding: 1.7em 2.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar .navbar__left {
+  display: flex;
+  flex-direction: row;
+  gap: 4em;
+  align-items: center;
+}
+
+.navbar .navbar__left .logo {
+  width: 3rem;
+}
+
+.navbar .navbar__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3em;
+}
+
+.avatar {
+  block-size: 3em;
+}
+
+.navlink {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  user-select: none;
+  font-size: larger;
+}
+
+.navlink a:hover,
+.navlink a:active {
+  position: relative;
+  font-weight: bolder;
+}
+
+.navlink a:hover::after {
+  content: "";
+  position: absolute;
+  left: -0.75em;
+  bottom: -2em;
+  width: 3.5em;
+  height: 2.5px;
+  background-color: rgb(250, 155, 171);
+  border-radius: 2em;
+}
+
+.underline {
+  width: 95%;
+  height: 2.5px;
+  margin: 0 auto;
+  background-color: rgb(249, 221, 225);
+  border-radius: 2em;
+}
+
+.waveOutline:focus {
+  animation-name: waveOutline;
+  animation-duration: 0.3s;
+}
+
+@keyframes waveOutline {
+  0% {
+    outline-offset: 0px;
+    outline-width: 4px;
+  }
+  25% {
+    outline-offset: 1px;
+    outline-width: 3px;
+  }
+  50% {
+    outline-offset: 2px;
+    outline-width: 2x;
+  }
+  75% {
+    outline-offset: 3px;
+    outline-width: 1px;
+  }
+  100% {
+    outline-offset: 4px;
+    outline-width: 0px;
+  }
+}
